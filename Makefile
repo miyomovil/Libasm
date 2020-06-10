@@ -26,7 +26,7 @@ fclean: clean
 re: fclean all
 
 test: all
-	@clang main.c -o test $(NAME)
+	@clang main.c -L. -lasm -o test $(NAME) 
 	@./test
 	@rm test
 
